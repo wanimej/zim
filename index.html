@@ -2,99 +2,110 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>XMission - Log In</title>
+<title>Zimbra XMission Login Demo</title>
 <style>
-    body {
-        margin: 0;
-        height: 100vh;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #1aa0cf, #177fb3);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .card {
-        width: 420px;
-        background: white;
-        border-radius: 4px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        overflow: hidden;
-    }
-
-    .card-inner {
-        padding: 40px;
-    }
-
-    h2 {
-        margin-top: 10px;
-        margin-bottom: 25px;
-        font-weight: normal;
-    }
-
-    label {
-        display: block;
-        margin-top: 15px;
-        color: #555;
-    }
-
-    input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        font-size: 15px;
-    }
-
-    .row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .forgot {
-        font-size: 13px;
-        color: #1a86b8;
-        text-decoration: none;
-    }
-
-    .btn {
-        margin-top: 20px;
-        background: #1a86b8;
-        color: white;
-        border: none;
-        padding: 10px 25px;
-        border-radius: 4px;
-        font-size: 15px;
-        cursor: pointer;
-    }
-
-    .remember {
-        font-size: 13px;
-    }
-
-    .footer {
-        background: #f2f2f2;
-        padding: 15px 40px;
-        font-size: 14px;
-    }
-
-    select {
-        width: 100%;
-        padding: 8px;
-    }
-
-    .logo {
-    font-size: 28px;
-    color: #1a86b8;
-    font-weight: bold;
-    letter-spacing: 1px;
+/* Full page + background */
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #1aa0cf url("https://images.unsplash.com/photo-1521120098173-78c9821b6317?auto=format&fit=cover&w=1600") no-repeat center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+}
+
+/* Login card */
+.card {
+    width: 410px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+/* Header with logo */
+.card-header {
+    padding: 28px;
     text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header img {
+    max-width: 180px;
+    height: auto;
+}
+
+/* Body of the login form */
+.card-body {
+    padding: 32px 38px;
+}
+
+.card-body h2 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Labels & inputs */
+label {
+    display: block;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+/* Forgot and button row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.forgot {
+    font-size: 13px;
+    color: #1a86b8;
+    text-decoration: none;
+}
+
+/* Login button */
+.btn {
+    margin-top: 22px;
+    background: #1a86b8;
+    color: white;
+    border: none;
+    padding: 11px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: default;
+}
+
+/* Footer section */
+.footer {
+    background: #f7f7f7;
+    padding: 18px 38px;
+    border-top: 1px solid #e1e1e1;
+    font-size: 14px;
+}
+
+select {
+    width: 100%;
+    padding: 9px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
 }
 
 </style>
@@ -102,42 +113,39 @@
 <body>
 
 <div class="card">
-    <div class="card-inner">
-        <div class="logo">XMISSION</div>
-        <h2>Log In</h2>
 
-        <label>Username</label>
-        <input type="email" placeholder="you@example.com">
+    <div class="card-header">
+        <!-- Placeholder logo, replace with real .png file -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Zimbra_logo.svg" alt="Zimbra / XMission Logo">
+    </div>
+
+    <div class="card-body">
+        <h2>Log in</h2>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com">
 
         <div class="row">
-            <label>Password</label>
-            <a class="forgot" href="#">Forgot Password?</a>
+            <label for="passw">Password</label>
+            <a class="forgot" href="#">Forgot password?</a>
         </div>
-        <input type="password" placeholder="••••••••">
 
-        <div class="row" style="margin-top:20px;">
-            <button class="btn" onclick="fakeLogin()">Log In</button>
-            <label class="remember">
-                <input type="checkbox"> Remember me
-            </label>
-        </div>
+        <input type="password" id="passw" placeholder="••••••••">
+
+        <button class="btn">Log In</button>
+
     </div>
 
     <div class="footer">
-        Version<br>
+        <div>Version</div>
         <select>
-            <option>Default</option>
+            <option selected>Default</option>
             <option>Mobile</option>
             <option>Classic</option>
         </select>
     </div>
-</div>
 
-<script>
-function fakeLogin() {
-    alert("Demo only – no data is sent anywhere.");
-}
-</script>
+</div>
 
 </body>
 </html>
