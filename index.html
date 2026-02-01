@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>XMission - Log In</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1aa0cf, #177fb3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 420px;
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+
+    .card-inner {
+        padding: 40px;
+    }
+
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 25px;
+        font-weight: normal;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        color: #555;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        font-size: 15px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .forgot {
+        font-size: 13px;
+        color: #1a86b8;
+        text-decoration: none;
+    }
+
+    .btn {
+        margin-top: 20px;
+        background: #1a86b8;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .remember {
+        font-size: 13px;
+    }
+
+    .footer {
+        background: #f2f2f2;
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .logo {
+        font-size: 26px;
+        color: #1a86b8;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-inner">
+        <div class="logo">XMISSION</div>
+        <h2>Log In</h2>
+
+        <label>Username</label>
+        <input type="email" placeholder="you@example.com">
+
+        <div class="row">
+            <label>Password</label>
+            <a class="forgot" href="#">Forgot Password?</a>
+        </div>
+        <input type="password" placeholder="••••••••">
+
+        <div class="row" style="margin-top:20px;">
+            <button class="btn" onclick="fakeLogin()">Log In</button>
+            <label class="remember">
+                <input type="checkbox"> Remember me
+            </label>
+        </div>
+    </div>
+
+    <div class="footer">
+        Version<br>
+        <select>
+            <option>Default</option>
+            <option>Mobile</option>
+            <option>Classic</option>
+        </select>
+    </div>
+</div>
+
+<script>
+function fakeLogin() {
+    alert("Demo only – no data is sent anywhere.");
+}
+</script>
+
+</body>
+</html>
